@@ -2,6 +2,7 @@
 from typing import Optional
 
 
+# Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
@@ -9,9 +10,7 @@ class ListNode:
 
 
 class Solution:
-    def addTwoNumbers(
-        self, l1: Optional[ListNode], l2: Optional[ListNode]
-    ) -> Optional[ListNode]:
+    def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
         dummy = ListNode(0)  # A dummy node to simplify list handling
         current = dummy  # Pointer to the current node in the result list
         carry = 0  # Initialize carry to 0
@@ -42,7 +41,7 @@ l2 = ListNode(5, ListNode(6, ListNode(4)))
 
 solution = Solution()
 o3 = solution.addTwoNumbers(l1, l2)
-
+print(o3.val)
 # Print the resulting list
 while o3:
     print(o3.val, end=" -> " if o3.next else "\n")
