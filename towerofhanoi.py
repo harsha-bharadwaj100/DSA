@@ -1,6 +1,5 @@
 def hanoi(n, start, end, mid):
-    if n == 1:
-        print(f"Move disk 1 from {start} to {end}")
+    if n == 0:
         return
     hanoi(n - 1, start, mid, end)
     print(f"Move disk {n} from {start} to {end}")
