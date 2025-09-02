@@ -33,10 +33,11 @@ class Solution:
                 carry = "0" if a[ptr] == b[ptr] == "0" else "1"
             res += sum
             ptr -= 1
-        return res[::-1]
+        return "1" + res[::-1] if carry == "1" else res[::-1]
 
 
 sol = Solution()
 print(sol.addBinary("11", "100"))
+print(sol.addBinary("11", "1"))
 print(sol.addBinary("0001001010000001", "010100110101"))
 print(sol.addBinary("0001011110110101", "010100110101"))
